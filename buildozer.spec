@@ -17,7 +17,7 @@ android.presplash_color = #1e3a8a
 android.permissions = INTERNET
 android.api = 33
 android.minapi = 24
-android.archs = arm64-v8a, armeabi-v7a
+android.archs = arm64-v8a
 android.accept_sdk_license = True
 android.allow_backup = True
 # Autorise la WebView à charger http://127.0.0.1 (serveur interne, jamais exposé au réseau)
