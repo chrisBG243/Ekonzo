@@ -6,7 +6,7 @@ source.dir = .
 source.include_exts = py,png,xml
 source.exclude_dirs = .github,bin,.buildozer
 version = 1.0
-requirements = python3,kivy==2.3.0,sqlite3,openssl,pyjnius,android
+requirements = python3==3.11.5,hostpython3==3.11.5,kivy==2.3.0,sqlite3,openssl,pyjnius,android
 orientation = portrait
 fullscreen = 0
 icon.filename = %(source.dir)s/icon.png
