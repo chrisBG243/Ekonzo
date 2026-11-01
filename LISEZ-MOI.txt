@@ -1,0 +1,32 @@
+EKONZO — APPLICATION ANDROID (APK)
+==================================
+
+Contenu : main.py (lanceur Android), ekonzo_web.py (le logiciel), buildozer.spec (configuration),
+          icon.png / presplash.png, dossier .github (compilation automatique).
+
+OBTENIR L'APK (sans rien installer sur l'ordinateur)
+----------------------------------------------------
+1. Créez un compte gratuit sur github.com, puis un nouveau dépôt (New repository), nom : ekonzo.
+2. Envoyez TOUT le contenu de ce dossier dans le dépôt (Add file > Upload files),
+   sans oublier le dossier .github. Si ce dossier ne monte pas, utilisez
+   Add file > Create new file, tapez  .github/workflows/build-apk.yml  et collez le contenu du fichier.
+3. Ouvrez l'onglet "Actions" : "Build APK Ekonzo" démarre seul (15 à 30 min la première fois).
+   Sinon : Actions > Build APK Ekonzo > Run workflow.
+4. Quand la ligne est verte : cliquez dessus, en bas "Artifacts" > ekonzo-apk (téléchargement d'un .zip).
+5. Dézippez : vous obtenez le fichier .apk. Envoyez-le sur le téléphone (câble, WhatsApp, Drive...).
+6. Sur le téléphone : ouvrez l'APK, autorisez "Installer des applications inconnues", installez.
+
+PREMIER LANCEMENT
+-----------------
+Créez le compte PATRON (nom + mot de passe). Ajoutez ensuite les vendeurs dans Plus > Utilisateurs.
+Les données restent sur le téléphone. Faites de temps en temps Plus > Sauvegarder la base :
+la copie va dans Téléchargements/Ekonzo.
+
+UTILISER SUR PC (navigateur, mêmes données que la version Windows)
+------------------------------------------------------------------
+    python ekonzo_web.py        puis ouvrir http://localhost:8000
+
+EN CAS DE PROBLÈME
+------------------
+Écran blanc ou message "ERR_CLEARTEXT_NOT_PERMITTED", ou échec de la compilation : envoyez la
+capture d'écran ou les dernières lignes du journal (onglet Actions) pour correction.

@@ -1,0 +1,20 @@
+name: Build APK Ekonzo
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compiler l'APK avec Buildozer
+        uses: ArtemSBulgakov/buildozer-action@v1
+        id: buildozer
+        with:
+          command: buildozer android debug
+          buildozer_version: stable
+      - name: Publier l'APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: ekonzo-apk
+          path: ${{ steps.buildozer.outputs.filename }}
